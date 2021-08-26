@@ -1,34 +1,7 @@
+var { ListNode, arr2List, List2Arr } = require("../utils/utils.js");
 /**
  * 给你一个链表的头节点 head ，旋转链表，将链表每个节点向右移动 k 个位置。
  */
-
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-function ListNode(val, next) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-}
-var arr2List = function (arr) {
-    let res;
-    for (let i = 0; i < arr.length; i++) {
-        let node = new ListNode(arr[arr.length - i - 1], res);
-        res = node;
-    }
-    return res;
-};
-var List2Arr = function (head) {
-    let res = [];
-    while (head) {
-        res.push(head.val);
-        head = head.next;
-    }
-    return res;
-};
 /**
  * @param {ListNode} head
  * @param {number} k
