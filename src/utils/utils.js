@@ -19,3 +19,41 @@ exports.List2Arr = function (head) {
     }
     return res;
 };
+var TreeNode = function (val, left, right) {
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
+};
+exports.TreeNode = TreeNode;
+exports.arr2Tree = function (arr) {
+    if (arr.length === 0) return null;
+    let root = new TreeNode(arr[0]);
+    const queue = [root];
+    let i = 1;
+    while (queue.length > 0) {
+        let node = queue.shift();
+        if (arr[i]) {
+            node.left = new TreeNode(arr[i]);
+            queue.push(node.left);
+        }
+        if (arr[i + 1]) {
+            node.right = new TreeNode(arr[i + 1]);
+            queue.push(node.right);
+        }
+    }
+    return root;
+};
+exports.tree2Arr = function (root) {
+    if (!root) return [];
+    const queue = [root];
+    const res = [];
+    while (queue.length > 0) {
+        let node = queue.shift();
+        node && queue.push(node.left, node.right);
+        res.push(node ? node.val : null);
+    }
+    let i = res.length - 1;
+    while (i >= 0 && res[i] === null) i--;
+    res.length = i + 1;
+    return res;
+};
