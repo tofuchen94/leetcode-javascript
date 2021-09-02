@@ -40,6 +40,7 @@ exports.arr2Tree = function (arr) {
             node.right = new TreeNode(arr[i + 1]);
             queue.push(node.right);
         }
+        i = i + 2;
     }
     return root;
 };
