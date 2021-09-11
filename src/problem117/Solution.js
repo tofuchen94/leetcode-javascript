@@ -57,25 +57,3 @@ var connect = function (root) {
     }
     return root;
 };
-
-var arr2Tree = function (arr) {
-    if (arr.length === 0) return null;
-    let root = new Node(arr[0]);
-    const queue = [root];
-    let i = 1;
-    while (queue.length > 0) {
-        let node = queue.shift();
-        if (arr[i]) {
-            node.left = new Node(arr[i]);
-            queue.push(node.left);
-        }
-        if (arr[i + 1]) {
-            node.right = new Node(arr[i + 1]);
-            queue.push(node.right);
-        }
-        i = i + 2;
-    }
-    return root;
-};
-
-console.log(connect(arr2Tree([1, 2, 3, 4, 5, null, 7])));
