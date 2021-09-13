@@ -32,11 +32,11 @@ exports.arr2Tree = function (arr) {
     let i = 1;
     while (queue.length > 0) {
         let node = queue.shift();
-        if (arr[i]) {
+        if (typeof arr[i] !== "undefined") {
             node.left = new TreeNode(arr[i]);
             queue.push(node.left);
         }
-        if (arr[i + 1]) {
+        if (typeof arr[i + 1] !== "undefined") {
             node.right = new TreeNode(arr[i + 1]);
             queue.push(node.right);
         }
