@@ -56,4 +56,5 @@ leetcode 题解(js 版)
 -   143.[重排链表](https://github.com/tofuchen94/leetcode-javascript/blob/master/src/problem143/Solution.js)
 -   147.[对链表进行插入排序](https://github.com/tofuchen94/leetcode-javascript/blob/master/src/problem147/Solution.js)
 -   148.[排序链表](https://github.com/tofuchen94/leetcode-javascript/blob/master/src/problem148/Solution.js) \*\*
--   150.[逆波兰表达式求值](https://github.com/tofuchen94/leetcode-javascript/blob/master/src/problem50/Solution.js)
+-   150.[逆波兰表达式求值](https://github.com/tofuchen94/leetcode-javascript/blob/master/src/problem150/Solution.js)
+-   151.[翻转字符串里的单词](https://github.com/tofuchen94/leetcode-javascript/blob/master/src/problem151/Solution.js)
